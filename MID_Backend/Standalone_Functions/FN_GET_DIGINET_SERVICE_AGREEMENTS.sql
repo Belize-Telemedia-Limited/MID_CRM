@@ -16,8 +16,8 @@ DECLARE
   --'5JwDphNa';
   vi_ip_info VARCHAR2(100) := 'DW_TESTING';
 --  vi_master_account_code VARCHAR2(100) := '40274'; --Root MA
-   vi_master_account_code VARCHAR2(100) := '80809'; --Multiple SA
-  -- vi_master_account_code VARCHAR2(100) := '42744701665'; --SUB MA
+  vi_master_account_code VARCHAR2(100) := '80809'; --Multiple SA
+  --  vi_master_account_code VARCHAR2(100) := '42744701665'; --SUB MA
   vi_product_type VARCHAR2(150) := 'DIGINET';
 --End Input Variables
 
