@@ -227,8 +227,8 @@ DECLARE
   END fn_get_diginet_service_agreements;
 
 BEGIN
-  -- vo_result := pck_net_inventory.fn_add_material_request(
-  vo_result := fn_get_diginet_service_agreements(
+  vo_result := pck_crm.fn_get_diginet_service_agreements(
+--  vo_result := fn_get_diginet_service_agreements(
     vi_username,vi_password,vi_ip_info,vi_master_account_code,vo_service_agreements,vo_message,vo_result
   );
   dbms_output.put_line(vi_username
