@@ -78,38 +78,38 @@ CREATE OR REPLACE PACKAGE "PCK_CRM" AS
   gv_codsystem VARCHAR2(7) := 'CRM';
   gv_log_level PLS_INTEGER := 1;  --Default i.e. Error only = 0, Full = 1, Access = 2 to log successful logins 
 
-  FUNCTION fn_set_selfcare (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_phonenumber VARCHAR2,vi_registration_tp VARCHAR2,vi_selfcare_password
-    VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_set_selfcare (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_phonenumber VARCHAR2,vi_registration_tp VARCHAR2,vi_selfcare_password
+  --   VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
-  FUNCTION fn_send_email (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_customername VARCHAR2,vi_receiveraddress VARCHAR2,vi_subject
-    VARCHAR2,vi_message VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_send_email (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_customername VARCHAR2,vi_receiveraddress VARCHAR2,vi_subject
+  --   VARCHAR2,vi_message VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
-  FUNCTION fn_set_email_random_code (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_msisdn VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_set_email_random_code (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_msisdn VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
   FUNCTION fn_send_sms (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_receiver VARCHAR2,vi_content VARCHAR2,vo_message OUT VARCHAR2
     ,vo_result OUT NUMBER
   ) RETURN NUMBER;
 
-  FUNCTION fn_set_sms_random_code (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_msisdn VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_set_sms_random_code (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_msisdn VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
-  FUNCTION fn_set_random_code (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_type VARCHAR2,vi_msisdn VARCHAR2,vo_message OUT VARCHAR2
-    ,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_set_random_code (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_type VARCHAR2,vi_msisdn VARCHAR2,vo_message OUT VARCHAR2
+  --   ,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
-  FUNCTION fn_validate_random_code (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_msisdn VARCHAR2,vi_code NUMBER,vo_message OUT VARCHAR2,vo_result
-    OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_validate_random_code (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_msisdn VARCHAR2,vi_code NUMBER,vo_message OUT VARCHAR2,vo_result
+  --   OUT NUMBER
+  -- ) RETURN NUMBER;
 
   --FUNCTION FN_GET_ACCOUNT_DETAILS(VI_USERNAME VARCHAR2, VI_PASSWORD VARCHAR2, VI_IP_INFO VARCHAR2, VI_PHONENUMBER VARCHAR2, VO_FIRSTNAME OUT VARCHAR2, VO_LASTNAME OUT VARCHAR2, VO_DOB OUT DATE, VO_EMAIL OUT VARCHAR2, VO_ACCOUNT_CODE OUT VARCHAR2, VO_PARENTACCOUNT OUT NUMBER, VO_ADDRESS OUT VARCHAR2, VO_CONTACT_ID OUT VARCHAR2, VO_MESSAGE OUT VARCHAR2,VO_RESULT OUT NUMBER)
   --RETURN NUMBER;
@@ -124,16 +124,16 @@ CREATE OR REPLACE PACKAGE "PCK_CRM" AS
   --FUNCTION FN_UPDATE_ACCOUNT_DETAILS(VI_USERNAME VARCHAR2, VI_PASSWORD VARCHAR2, VI_IP_INFO VARCHAR2,VI_SUBSCRIBER_SESSION_ID NUMBER, VI_PHONENUMBER VARCHAR2, VI_NEWPHONENUMBER VARCHAR2, VI_FIRSTNAME VARCHAR2, VI_LASTNAME VARCHAR2, VI_DOB DATE, VI_EMAIL VARCHAR2, VO_MESSAGE OUT VARCHAR2, VO_RESULT OUT NUMBER)
   --RETURN NUMBER;
 
-  FUNCTION fn_update_account_details (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_subscriber_session_id NUMBER,vi_account_code VARCHAR2,vi_contact_id
-    NUMBER,vi_contact_number VARCHAR2,vi_firstname VARCHAR2,vi_middlename VARCHAR2,vi_lastname VARCHAR2,vi_dob DATE,vi_email VARCHAR2
-    ,vo_message OUT VARCHAR2,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_update_account_details (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_subscriber_session_id NUMBER,vi_account_code VARCHAR2,vi_contact_id
+  --   NUMBER,vi_contact_number VARCHAR2,vi_firstname VARCHAR2,vi_middlename VARCHAR2,vi_lastname VARCHAR2,vi_dob DATE,vi_email VARCHAR2
+  --   ,vo_message OUT VARCHAR2,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
-  FUNCTION fn_add_service (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_subscriber_session_id NUMBER,vi_account_code VARCHAR2,vi_service_code
-    VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_add_service (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_subscriber_session_id NUMBER,vi_account_code VARCHAR2,vi_service_code
+  --   VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
   FUNCTION fn_get_service_bdu (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_service_id NUMBER,vi_member VARCHAR2,vi_service_description
@@ -170,46 +170,46 @@ CREATE OR REPLACE PACKAGE "PCK_CRM" AS
     OUT VARCHAR2,vo_result OUT NUMBER
   ) RETURN NUMBER;
 
-  FUNCTION fn_login (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_phone_number VARCHAR2,vi_selfcare_password VARCHAR2,vo_session_id
-    OUT NUMBER,vo_selfcare_level OUT VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_login (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_phone_number VARCHAR2,vi_selfcare_password VARCHAR2,vo_session_id
+  --   OUT NUMBER,vo_selfcare_level OUT VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
-  FUNCTION fn_password_reset (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_phone_number VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT
-    NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_password_reset (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_phone_number VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT
+  --   NUMBER
+  -- ) RETURN NUMBER;
 
   FUNCTION fn_get_historical_payments (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_acct_code VARCHAR2,vo_payments OUT CLOB,vo_message OUT VARCHAR2
     ,vo_result OUT NUMBER
   ) RETURN NUMBER;
 
-  FUNCTION fn_update_account_sms_presentation (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_acct_code VARCHAR2,vi_option VARCHAR2,vo_message OUT VARCHAR2
-    ,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_update_account_sms_presentation (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_acct_code VARCHAR2,vi_option VARCHAR2,vo_message OUT VARCHAR2
+  --   ,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
-  FUNCTION fn_change_selfcare_password (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_phonenumber VARCHAR2,vi_selfcare_password VARCHAR2,vo_message
-    OUT VARCHAR2,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_change_selfcare_password (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_phonenumber VARCHAR2,vi_selfcare_password VARCHAR2,vo_message
+  --   OUT VARCHAR2,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
-  FUNCTION fn_get_servicecdr (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_account_code VARCHAR2,vo_cdr OUT CLOB,vo_message OUT VARCHAR2
-    ,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_get_servicecdr (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_account_code VARCHAR2,vo_cdr OUT CLOB,vo_message OUT VARCHAR2
+  --   ,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
   FUNCTION fn_get_prepaid_balance (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_account_code VARCHAR2,vi_subscriber_session_id NUMBER,vo_prepaid_credit
     OUT VARCHAR2,vo_message OUT VARCHAR2,vo_result OUT NUMBER
   ) RETURN NUMBER;
 
-  FUNCTION fn_transfer_credit (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_account_code VARCHAR2,vi_phone_number VARCHAR2,vi_transfer_amount
-    NUMBER,vi_subscriber_session_id NUMBER, /*VI_RECEIVING_ACCOUNT_CODE VARCHAR2,*/vi_receiving_phone_number VARCHAR2,vo_message
-    OUT VARCHAR2,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_transfer_credit (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_account_code VARCHAR2,vi_phone_number VARCHAR2,vi_transfer_amount
+  --   NUMBER,vi_subscriber_session_id NUMBER, /*VI_RECEIVING_ACCOUNT_CODE VARCHAR2,*/vi_receiving_phone_number VARCHAR2,vo_message
+  --   OUT VARCHAR2,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
   FUNCTION fn_get_historical_topup (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_account_code VARCHAR2,vi_subscriber_session_id NUMBER,vo_historical_topup
@@ -221,21 +221,20 @@ CREATE OR REPLACE PACKAGE "PCK_CRM" AS
     NUMBER,vo_topup_amount OUT NUMBER,vo_message OUT VARCHAR2,vo_result OUT NUMBER
   ) RETURN NUMBER;
 
-  FUNCTION fn_get_downloadable_invoice (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_invoice_id INT,vo_invoice OUT BLOB,vo_message OUT VARCHAR2
-    ,vo_result OUT NUMBER
-  ) RETURN NUMBER;
-
+  -- FUNCTION fn_get_downloadable_invoice (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_invoice_id INT,vo_invoice OUT BLOB,vo_message OUT VARCHAR2
+  --   ,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
   FUNCTION fn_get_account_shrd_bdu (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_account_code VARCHAR2,vo_bdu OUT VARCHAR2,vo_message OUT
     VARCHAR2,vo_result OUT NUMBER
   ) RETURN NUMBER;
 
-  FUNCTION fn_set_selfcare_migration (
-    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_account_code VARCHAR2,vi_phone_number VARCHAR2,vo_message
-    OUT VARCHAR2,vo_result OUT NUMBER
-  ) RETURN NUMBER;
+  -- FUNCTION fn_set_selfcare_migration (
+  --   vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_account_code VARCHAR2,vi_phone_number VARCHAR2,vo_message
+  --   OUT VARCHAR2,vo_result OUT NUMBER
+  -- ) RETURN NUMBER;
 
   FUNCTION fn_add_ticket (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_account_provider VARCHAR2,vi_account_code VARCHAR2,vi_source
@@ -256,6 +255,11 @@ CREATE OR REPLACE PACKAGE "PCK_CRM" AS
   FUNCTION fn_helper_parse_sa_to_json (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_response_clob CLOB,vi_product_type VARCHAR2,vo_service_agreements
     OUT CLOB,vo_message OUT VARCHAR2,vo_result OUT NUMBER
+  ) RETURN NUMBER;
+
+  FUNCTION fn_get_diginet_service_agreements (
+    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_master_account_code VARCHAR2,vo_service_agreements OUT CLOB
+    ,vo_message OUT VARCHAR2,vo_result OUT NUMBER
   ) RETURN NUMBER;
 
   FUNCTION get_account_dump RETURN SYS_REFCURSOR;
