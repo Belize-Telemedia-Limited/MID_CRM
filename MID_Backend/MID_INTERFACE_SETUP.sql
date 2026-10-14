@@ -51,7 +51,7 @@ BEGIN
       FROM mid_system
      WHERE nm_system = vv_nm_system;
 
-    l_mid_interfaces := '{FN_HELPER_PARSE_SA_TO_JSON
+    l_mid_interfaces := '{
   "Functions": [
     {
       "nm_interface": "FN_GET_DIGINET_SERVICE_AGREEMENTS",
