@@ -16,7 +16,8 @@ DECLARE
   --'5JwDphNa';
   vi_ip_info VARCHAR2(100) := 'DW_TESTING';
 --  vi_master_account_code VARCHAR2(100) := '40274'; --Root MA
-  vi_master_account_code VARCHAR2(100) := '80809'; --Multiple SA
+--  vi_master_account_code VARCHAR2(100) := '80809'; --Multiple SA
+  vi_master_account_code VARCHAR2(100) := 57006; -- SA under non billabe
   --  vi_master_account_code VARCHAR2(100) := '42744701665'; --SUB MA
   vi_product_type VARCHAR2(150) := 'DIGINET';
 --End Input Variables
@@ -131,7 +132,7 @@ DECLARE
     FOR r_sub IN (
       SELECT x.sub_ma_code
         FROM XMLTABLE ( XMLNAMESPACES ( 'http://schemas.xmlsoap.org/soap/envelope/' AS "soapenv",'http://api.csr.mind.com/account'
-        AS "c1" ),'//c1:account[c1:status/c1:code="1" and c1:billing/c1:billable="true" and c1:product/@code="RMPACK"]'
+        AS "c1" ),'//c1:account[c1:status/c1:code="1" and c1:billing/c1:billable="false" and c1:product/@code="RMPACK"]'
           PASSING xmltype(vv_out_resp_clob)
         COLUMNS
           sub_ma_code VARCHAR2(50) PATH 'c1:code'
@@ -227,8 +228,8 @@ DECLARE
   END fn_get_diginet_service_agreements;
 
 BEGIN
-  -- vo_result := pck_net_inventory.fn_add_material_request(
-  vo_result := fn_get_diginet_service_agreements(
+  vo_result := pck_crm.fn_get_diginet_service_agreements(
+--  vo_result := fn_get_diginet_service_agreements(
     vi_username,vi_password,vi_ip_info,vi_master_account_code,vo_service_agreements,vo_message,vo_result
   );
   dbms_output.put_line(vi_username
