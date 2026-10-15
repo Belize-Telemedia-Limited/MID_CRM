@@ -18,7 +18,7 @@ DECLARE
 --  vi_master_account_code VARCHAR2(100) := '40274'; --Root MA
   vi_master_account_code VARCHAR2(100) := '80809'; --Multiple SA
   -- vi_master_account_code VARCHAR2(100) := '42744701665'; --SUB MA
-  vi_product_type VARCHAR2(150) := 'DIGINET';
+  vi_product_type VARCHAR2(150) := 'DIGITEL';
 --End Input Variables
 
 --Begin Output Variables
@@ -27,7 +27,7 @@ DECLARE
   vo_service_agreements CLOB;
 --End Output Variables
 
-  FUNCTION fn_get_diginet_service_agreements (
+  FUNCTION fn_get_digitel_service_agreements (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_master_account_code VARCHAR2,vo_service_agreements OUT CLOB
     ,vo_message OUT VARCHAR2,vo_result OUT NUMBER
   ) RETURN NUMBER IS 
@@ -123,15 +123,51 @@ DECLARE
       vi_username,vi_password,vi_ip_info,vi_master_account_code,vv_out_resp_clob,vo_message,vo_result
     );
 
+    IF vo_result < 0 THEN
+      vo_service_agreements := to_clob('[]');
+      vo_message            := 'Error occurred while fetching accounts by parent';
+      vo_result             := -2000;
+      vv_output_parameters  := 'VO_SERVICE_AGREEMENTS: '
+                              || vo_service_agreements
+                              || '|VO_MESSAGE: '
+                              || vo_message
+                              || '|VO_RESULT: '
+                              || vo_result;
+      -- Write combined data to LOB
+      pck_middle.mid_log_executions(
+        vv_id,vi_ip_info,vv_id_interface,vv_id_parent,vv_id_codsystem,vv_mid_id_user,vv_input_parameters,vv_output_parameters
+        ,sysdate,vv_exe_time
+      );
+      RETURN vo_result;
+    END IF;
+
     vo_result             := pck_crm.fn_helper_parse_sa_to_json(
       vi_username,vi_password,vi_ip_info,vv_out_resp_clob,vv_product_type,vo_service_agreements,vo_message,vo_result
     );
+
+    IF vo_result < 0 THEN
+      vo_service_agreements := to_clob('[]');
+      vo_message            := 'Error occurred while parsing service agreements';
+      vo_result             := -2001;
+      vv_output_parameters  := 'VO_SERVICE_AGREEMENTS: '
+                              || vo_service_agreements
+                              || '|VO_MESSAGE: '
+                              || vo_message
+                              || '|VO_RESULT: '
+                              || vo_result;
+      -- Write combined data to LOB
+      pck_middle.mid_log_executions(
+        vv_id,vi_ip_info,vv_id_interface,vv_id_parent,vv_id_codsystem,vv_mid_id_user,vv_input_parameters,vv_output_parameters
+        ,sysdate,vv_exe_time
+      );
+      RETURN vo_result;
+    END IF;
 
 -- 3. Loop through all active, billable RMPACK Sub-MAs and aggregate their children
     FOR r_sub IN (
       SELECT x.sub_ma_code
         FROM XMLTABLE ( XMLNAMESPACES ( 'http://schemas.xmlsoap.org/soap/envelope/' AS "soapenv",'http://api.csr.mind.com/account'
-        AS "c1" ),'//c1:account[c1:status/c1:code="1" and c1:billing/c1:billable="true" and c1:product/@code="RMPACK"]'
+        AS "c1" ),'//c1:account[c1:status/c1:code="1" and c1:billing/c1:billable="false" and c1:product/@code="RMPACK"]'
           PASSING xmltype(vv_out_resp_clob)
         COLUMNS
           sub_ma_code VARCHAR2(50) PATH 'c1:code'
@@ -224,11 +260,11 @@ DECLARE
                              || dbms_utility.format_call_stack || dbms_utility.format_error_backtrace); --TO DO: Log error with session call
       END IF;
       RETURN vo_result;
-  END fn_get_diginet_service_agreements;
+  END fn_get_digitel_service_agreements;
 
 BEGIN
-  vo_result := pck_crm.fn_get_diginet_service_agreements(
---  vo_result := fn_get_diginet_service_agreements(
+  -- vo_result := pck_crm.fn_get_digitel_service_agreements(
+  vo_result := fn_get_digitel_service_agreements(
     vi_username,vi_password,vi_ip_info,vi_master_account_code,vo_service_agreements,vo_message,vo_result
   );
   dbms_output.put_line(vi_username
