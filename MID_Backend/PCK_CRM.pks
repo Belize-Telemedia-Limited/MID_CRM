@@ -262,6 +262,11 @@ CREATE OR REPLACE PACKAGE "PCK_CRM" AS
     ,vo_message OUT VARCHAR2,vo_result OUT NUMBER
   ) RETURN NUMBER;
 
+  FUNCTION fn_get_digitel_service_agreements (
+    vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_master_account_code VARCHAR2,vo_service_agreements OUT CLOB
+    ,vo_message OUT VARCHAR2,vo_result OUT NUMBER
+  ) RETURN NUMBER;
+
   FUNCTION get_account_dump RETURN SYS_REFCURSOR;
   FUNCTION get_contact_dump RETURN SYS_REFCURSOR;
   FUNCTION get_services_dump RETURN SYS_REFCURSOR;
