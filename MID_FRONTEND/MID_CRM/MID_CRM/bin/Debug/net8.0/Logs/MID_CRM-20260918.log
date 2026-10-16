@@ -1,0 +1,33 @@
+2026-09-18 12:48:48.026 -06:00 [INF] MID_CRM application started. Log directory: C:\Users\jhoare\OneDrive - Belize Telemedia Ltd\Documents\GitHub\CRM\MID_FRONTEND\MID_CRM\MID_CRM\bin\Debug\net8.0\Logs
+2026-09-18 12:48:48.618 -06:00 [INF] Now listening on: https://localhost:7091
+2026-09-18 12:48:48.620 -06:00 [INF] Now listening on: http://localhost:5057
+2026-09-18 12:48:48.679 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-18 12:48:48.679 -06:00 [INF] Hosting environment: Development
+2026-09-18 12:48:48.679 -06:00 [INF] Content root path: C:\Users\jhoare\OneDrive - Belize Telemedia Ltd\Documents\GitHub\CRM\MID_FRONTEND\MID_CRM\MID_CRM
+2026-09-18 12:48:49.577 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.html - null null
+2026-09-18 12:48:49.884 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.html - 304 null null 324.6352ms
+2026-09-18 12:48:49.963 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.css - null null
+2026-09-18 12:48:49.963 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.js - null null
+2026-09-18 12:48:49.963 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - null null
+2026-09-18 12:48:49.964 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - null null
+2026-09-18 12:48:49.964 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-18 12:48:49.964 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - null null
+2026-09-18 12:48:49.969 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_vs/browserLink - null null
+2026-09-18 12:48:50.010 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.js - 200 null application/javascript;charset=utf-8 46.6017ms
+2026-09-18 12:48:50.030 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 65.9815ms
+2026-09-18 12:48:50.039 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - 304 null null 75.764ms
+2026-09-18 12:48:50.039 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.css - 304 null null 76.8433ms
+2026-09-18 12:48:50.039 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - 304 null null 75.3925ms
+2026-09-18 12:48:50.039 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - 304 null null 76.8385ms
+2026-09-18 12:48:50.116 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_vs/browserLink - 200 null text/javascript; charset=UTF-8 147.1211ms
+2026-09-18 12:48:50.207 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - null null
+2026-09-18 12:48:50.227 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 20.7068ms
+2026-09-18 12:48:55.805 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/ - null null
+2026-09-18 12:48:55.822 -06:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-09-18 12:48:55.834 -06:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-09-18 12:48:55.843 -06:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-09-18 12:48:55.844 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/ - 200 null text/html 39.9705ms
+2026-09-18 12:48:55.877 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_vs/browserLink - null null
+2026-09-18 12:48:55.879 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-18 12:48:55.882 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 3.2667ms
+2026-09-18 12:48:55.896 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.8588ms

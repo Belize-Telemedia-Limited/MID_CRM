@@ -1,0 +1,31 @@
+2026-09-29 16:32:33.340 -06:00 [INF] MID_CRM application started. Log directory: C:\Users\jhoare\OneDrive - Belize Telemedia Ltd\Documents\GitHub\CRM\MID_FRONTEND\MID_CRM\MID_CRM\bin\Debug\net8.0\Logs
+2026-09-29 16:32:34.256 -06:00 [INF] Now listening on: https://localhost:7091
+2026-09-29 16:32:34.261 -06:00 [INF] Now listening on: http://localhost:5057
+2026-09-29 16:32:34.456 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-29 16:32:34.456 -06:00 [INF] Hosting environment: Development
+2026-09-29 16:32:34.456 -06:00 [INF] Content root path: C:\Users\jhoare\OneDrive - Belize Telemedia Ltd\Documents\GitHub\CRM\MID_FRONTEND\MID_CRM\MID_CRM
+2026-09-29 16:32:34.975 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.html - null null
+2026-09-29 16:32:35.192 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.html - 304 null null 239.0446ms
+2026-09-29 16:32:35.235 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - null null
+2026-09-29 16:32:35.235 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.css - null null
+2026-09-29 16:32:35.235 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - null null
+2026-09-29 16:32:35.235 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - null null
+2026-09-29 16:32:35.236 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 16:32:35.242 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.js - null null
+2026-09-29 16:32:35.246 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.js - 304 null null 3.3635ms
+2026-09-29 16:32:35.252 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_vs/browserLink - null null
+2026-09-29 16:32:35.306 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 69.9011ms
+2026-09-29 16:32:35.318 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - 304 null null 83.9712ms
+2026-09-29 16:32:35.318 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - 304 null null 83.2874ms
+2026-09-29 16:32:35.319 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.css - 304 null null 84.1023ms
+2026-09-29 16:32:35.319 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - 304 null null 84.4034ms
+2026-09-29 16:32:35.351 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_vs/browserLink - 200 null text/javascript; charset=UTF-8 98.9499ms
+2026-09-29 16:32:35.391 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - null null
+2026-09-29 16:32:35.408 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 17.2277ms
+2026-09-29 16:32:42.473 -06:00 [INF] Request starting HTTP/2 POST https://localhost:7091/api/SetSms - application/json 117
+2026-09-29 16:32:42.484 -06:00 [INF] Executing endpoint 'MID_CRM.Controllers.MidController.SetSms (MID_CRM)'
+2026-09-29 16:32:42.514 -06:00 [INF] Route matched with {action = "SetSms", controller = "Mid"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MID_CRM.Models.MWResponse]] SetSms(MID_CRM.Models.SetSMSRequest) on controller MID_CRM.Controllers.MidController (MID_CRM).
+2026-09-29 16:32:43.468 -06:00 [INF] Executing OkObjectResult, writing value of type 'MID_CRM.Models.MWResponse'.
+2026-09-29 16:32:43.476 -06:00 [INF] Executed action MID_CRM.Controllers.MidController.SetSms (MID_CRM) in 957.8525ms
+2026-09-29 16:32:43.476 -06:00 [INF] Executed endpoint 'MID_CRM.Controllers.MidController.SetSms (MID_CRM)'
+2026-09-29 16:32:43.477 -06:00 [INF] Request finished HTTP/2 POST https://localhost:7091/api/SetSms - 200 null application/json; charset=utf-8 1005.4066ms

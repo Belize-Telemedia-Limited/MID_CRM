@@ -1,0 +1,574 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "MID_CRM",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/SetSms": {
+      "post": {
+        "tags": [
+          "Mid"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetSMSRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetSMSRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetSMSRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetPrepaidBalance": {
+      "post": {
+        "tags": [
+          "Mid"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWSerializedClobResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWSerializedClobResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWSerializedClobResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetAccountMobileServices": {
+      "post": {
+        "tags": [
+          "Mid"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWSerializedClobResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWSerializedClobResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWSerializedClobResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetServices": {
+      "post": {
+        "tags": [
+          "Mid"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWSerializedClobResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWSerializedClobResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MWSerializedClobResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetAccountCode": {
+      "post": {
+        "tags": [
+          "Mid"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountCodeRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountCodeRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountCodeRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAccountCodeResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAccountCodeResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAccountCodeResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/GetAccountUDF": {
+      "post": {
+        "tags": [
+          "Mid"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/GetAccountRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAccountUDFResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAccountUDFResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/GetAccountUDFResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/SetTicket": {
+      "post": {
+        "tags": [
+          "Mid"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetTicketRequest"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetTicketRequest"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/SetTicketRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetTicketResponse"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetTicketResponse"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SetTicketResponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "GetAccountCodeRequest": {
+        "type": "object",
+        "properties": {
+          "vI_USERNAME": {
+            "type": "string",
+            "default": "SFCRM",
+            "nullable": true
+          },
+          "vI_PASSWORD": {
+            "type": "string",
+            "default": "SFCRM",
+            "nullable": true
+          },
+          "vI_PHONE_NUMBER": {
+            "type": "string",
+            "default": "6155644",
+            "nullable": true
+          },
+          "vI_ACCOUNT_ID": {
+            "type": "integer",
+            "format": "int32",
+            "default": 123456
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAccountCodeResponse": {
+        "type": "object",
+        "properties": {
+          "vO_ACCOUNT": {
+            "type": "string",
+            "nullable": true
+          },
+          "vO_BMACCOUNT_ID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "vO_MESSAGE": {
+            "type": "string",
+            "nullable": true
+          },
+          "vO_RESULT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAccountRequest": {
+        "type": "object",
+        "properties": {
+          "vI_USERNAME": {
+            "type": "string",
+            "default": "SFCRM",
+            "nullable": true
+          },
+          "vI_PASSWORD": {
+            "type": "string",
+            "default": "SFCRM",
+            "nullable": true
+          },
+          "vI_ACCOUNT_Code": {
+            "type": "string",
+            "default": "23589",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "GetAccountUDFResponse": {
+        "type": "object",
+        "properties": {
+          "vO_SELFCARE_UDF": {
+            "type": "string",
+            "nullable": true
+          },
+          "vO_MESSAGE": {
+            "type": "string",
+            "nullable": true
+          },
+          "vO_RESULT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MWResponse": {
+        "type": "object",
+        "properties": {
+          "vO_MESSAGE": {
+            "type": "string",
+            "nullable": true
+          },
+          "vO_RESULT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "MWSerializedClobResponse": {
+        "type": "object",
+        "properties": {
+          "vO_CLOB": {
+            "nullable": true
+          },
+          "vO_MESSAGE": {
+            "type": "string",
+            "nullable": true
+          },
+          "vO_RESULT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetSMSRequest": {
+        "type": "object",
+        "properties": {
+          "vI_USERNAME": {
+            "type": "string",
+            "default": "SFCRM",
+            "nullable": true
+          },
+          "vI_PASSWORD": {
+            "type": "string",
+            "default": "SFCRM",
+            "nullable": true
+          },
+          "vI_PHONE_NUMBER": {
+            "type": "string",
+            "default": "6155644",
+            "nullable": true
+          },
+          "vI_CONTENT": {
+            "type": "string",
+            "default": "testing SMS",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetTicketRequest": {
+        "type": "object",
+        "properties": {
+          "vI_USERNAME": {
+            "type": "string",
+            "default": "SFCRM",
+            "nullable": true
+          },
+          "vI_PASSWORD": {
+            "type": "string",
+            "default": "SFCRM",
+            "nullable": true
+          },
+          "vI_ACCOUNT_PROVIDER": {
+            "type": "string",
+            "default": "SFCRM",
+            "nullable": true
+          },
+          "vI_ACCOUNT_CODE": {
+            "type": "string",
+            "default": "Test Code",
+            "nullable": true
+          },
+          "vI_SOURCE": {
+            "type": "string",
+            "default": "Test Source",
+            "nullable": true
+          },
+          "vI_CATEGORY": {
+            "type": "string",
+            "default": "Test Category",
+            "nullable": true
+          },
+          "vI_AREA": {
+            "type": "string",
+            "default": "Test Area",
+            "nullable": true
+          },
+          "vI_TYPE": {
+            "type": "string",
+            "default": "Test Type",
+            "nullable": true
+          },
+          "vI_NOTE": {
+            "type": "string",
+            "default": "Test Note",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "SetTicketResponse": {
+        "type": "object",
+        "properties": {
+          "vO_BUSINESS_PROCESS_ID": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "vO_MESSAGE": {
+            "type": "string",
+            "nullable": true
+          },
+          "vO_RESULT": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "Mid"
+    }
+  ]
+}

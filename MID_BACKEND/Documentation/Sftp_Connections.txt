@@ -1,0 +1,13 @@
+6D CONNECTION
+
+USERNAME: sftpuser
+PASSWORD: Sftp@2024
+SFTP PATH: /nifi-sftp-shared-data/DownloadAndWin_CDR
+COMMAND: sftp sftpuser@a729e06d837bb48f2b913f8835b2c6f2-cdff8fbc3f968ca3.elb.us-east-1.amazonaws.com
+IP: 172.36.104.159
+
+MIDDLWARE CONNECTION
+USERNAME: oracle
+PASSWORD: oracle
+SFTP PATH: /u01/oracle/MIDDLEWARE/6D/DIGIWALLET
+IP: 172.21.56.30

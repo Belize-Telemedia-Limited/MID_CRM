@@ -1,0 +1,96 @@
+2026-09-29 15:43:44.730 -06:00 [INF] MID_CRM application started. Log directory: C:\Users\jhoare\OneDrive - Belize Telemedia Ltd\Documents\GitHub\CRM\MID_FRONTEND\MID_CRM\MID_CRM\bin\Debug\net8.0\Logs
+2026-09-29 15:43:45.952 -06:00 [INF] Now listening on: https://localhost:7091
+2026-09-29 15:43:45.953 -06:00 [INF] Now listening on: http://localhost:5057
+2026-09-29 15:43:46.052 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-29 15:43:46.052 -06:00 [INF] Hosting environment: Development
+2026-09-29 15:43:46.052 -06:00 [INF] Content root path: C:\Users\jhoare\OneDrive - Belize Telemedia Ltd\Documents\GitHub\CRM\MID_FRONTEND\MID_CRM\MID_CRM
+2026-09-29 15:43:46.948 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger - null null
+2026-09-29 15:43:47.201 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger - 301 null null 272.7113ms
+2026-09-29 15:43:47.215 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.html - null null
+2026-09-29 15:43:47.290 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.html - 200 null text/html;charset=utf-8 75.9246ms
+2026-09-29 15:43:47.375 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - null null
+2026-09-29 15:43:47.376 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - null null
+2026-09-29 15:43:47.376 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.css - null null
+2026-09-29 15:43:47.376 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - null null
+2026-09-29 15:43:47.377 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.js - null null
+2026-09-29 15:43:47.383 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.js - 200 null application/javascript;charset=utf-8 5.9255ms
+2026-09-29 15:43:47.381 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 15:43:47.385 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_vs/browserLink - null null
+2026-09-29 15:43:47.404 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 22.8925ms
+2026-09-29 15:43:47.416 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.css - 200 152 text/css 39.7433ms
+2026-09-29 15:43:47.431 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - 200 77731 text/javascript 54.8565ms
+2026-09-29 15:43:47.439 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - 200 26499 text/css 63.9889ms
+2026-09-29 15:43:47.446 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - 200 421507 text/javascript 70.6621ms
+2026-09-29 15:43:47.498 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_vs/browserLink - 200 null text/javascript; charset=UTF-8 113.3735ms
+2026-09-29 15:43:47.614 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - null null
+2026-09-29 15:43:47.652 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/favicon-32x32.png - null null
+2026-09-29 15:43:47.658 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/favicon-32x32.png - 200 628 image/png 6.1953ms
+2026-09-29 15:43:47.659 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 45.5996ms
+2026-09-29 15:43:50.876 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/ - null null
+2026-09-29 15:43:50.886 -06:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-09-29 15:43:50.905 -06:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-09-29 15:43:50.905 -06:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-09-29 15:43:50.905 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/ - 200 null text/html 29.2313ms
+2026-09-29 15:43:50.924 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 15:43:50.924 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_vs/browserLink - null null
+2026-09-29 15:43:50.925 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 1.8995ms
+2026-09-29 15:43:50.942 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_vs/browserLink - 200 null text/javascript; charset=UTF-8 18.2832ms
+2026-09-29 15:43:51.066 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/favicon.ico - null null
+2026-09-29 15:43:51.067 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/favicon.ico - 404 0 null 1.0191ms
+2026-09-29 15:43:51.068 -06:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7091/favicon.ico, Response status code: 404
+2026-09-29 15:43:53.086 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/SoapAPI?wsdl - null null
+2026-09-29 15:43:53.156 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/SoapAPI?wsdl - 200 23646 text/xml;charset=UTF-8 69.966ms
+2026-09-29 15:43:56.304 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/ - null null
+2026-09-29 15:43:56.307 -06:00 [INF] Executing endpoint 'HTTP: GET /'
+2026-09-29 15:43:56.307 -06:00 [INF] Write content with HTTP Response ContentType of text/html
+2026-09-29 15:43:56.307 -06:00 [INF] Executed endpoint 'HTTP: GET /'
+2026-09-29 15:43:56.307 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/ - 200 null text/html 3.1584ms
+2026-09-29 15:43:56.356 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_vs/browserLink - null null
+2026-09-29 15:43:56.356 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 15:43:56.357 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 1.6826ms
+2026-09-29 15:43:56.370 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_vs/browserLink - 200 null text/javascript; charset=UTF-8 14.4177ms
+2026-09-29 15:43:57.823 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.html - null null
+2026-09-29 15:43:57.826 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.html - 304 null null 3.1143ms
+2026-09-29 15:43:57.867 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - null null
+2026-09-29 15:43:57.867 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - 304 null null 0.8964ms
+2026-09-29 15:43:57.869 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.css - null null
+2026-09-29 15:43:57.869 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - null null
+2026-09-29 15:43:57.869 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - null null
+2026-09-29 15:43:57.870 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 15:43:57.870 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.js - null null
+2026-09-29 15:43:57.871 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - 304 null null 1.937ms
+2026-09-29 15:43:57.871 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_vs/browserLink - null null
+2026-09-29 15:43:57.871 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.css - 304 null null 2.0391ms
+2026-09-29 15:43:57.871 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - 304 null null 1.981ms
+2026-09-29 15:43:57.872 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.js - 304 null null 2.2423ms
+2026-09-29 15:43:57.872 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 2.7219ms
+2026-09-29 15:43:57.891 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_vs/browserLink - 200 null text/javascript; charset=UTF-8 20.6509ms
+2026-09-29 15:43:57.996 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - null null
+2026-09-29 15:43:58.007 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 11.0414ms
+2026-09-29 15:44:01.443 -06:00 [INF] Request starting HTTP/2 POST https://localhost:7091/api/SetSms - application/json 115
+2026-09-29 15:44:01.446 -06:00 [INF] Executing endpoint 'MID_CRM.Controllers.MidController.SetSms (MID_CRM)'
+2026-09-29 15:44:01.469 -06:00 [INF] Route matched with {action = "SetSms", controller = "Mid"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[MID_CRM.Models.MWResponse]] SetSms(MID_CRM.Models.SetSMSRequest) on controller MID_CRM.Controllers.MidController (MID_CRM).
+2026-09-29 15:48:32.584 -06:00 [INF] MID_CRM application started. Log directory: C:\Users\jhoare\OneDrive - Belize Telemedia Ltd\Documents\GitHub\CRM\MID_FRONTEND\MID_CRM\MID_CRM\bin\Debug\net8.0\Logs
+2026-09-29 15:48:34.211 -06:00 [INF] Now listening on: https://localhost:7091
+2026-09-29 15:48:34.216 -06:00 [INF] Now listening on: http://localhost:5057
+2026-09-29 15:48:34.459 -06:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-09-29 15:48:34.460 -06:00 [INF] Hosting environment: Development
+2026-09-29 15:48:34.461 -06:00 [INF] Content root path: C:\Users\jhoare\OneDrive - Belize Telemedia Ltd\Documents\GitHub\CRM\MID_FRONTEND\MID_CRM\MID_CRM
+2026-09-29 15:48:35.309 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.html - null null
+2026-09-29 15:48:35.883 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.html - 304 null null 616.0243ms
+2026-09-29 15:48:35.955 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - null null
+2026-09-29 15:48:35.955 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - null null
+2026-09-29 15:48:35.956 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - null null
+2026-09-29 15:48:35.957 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.css - null null
+2026-09-29 15:48:35.955 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - null null
+2026-09-29 15:48:35.958 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/index.js - null null
+2026-09-29 15:48:35.965 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.js - 304 null null 6.4597ms
+2026-09-29 15:48:35.976 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/_vs/browserLink - null null
+2026-09-29 15:48:36.019 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_framework/aspnetcore-browser-refresh.js - 200 14919 application/javascript; charset=utf-8 62.3241ms
+2026-09-29 15:48:36.051 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-standalone-preset.js - 304 null null 96.0992ms
+2026-09-29 15:48:36.051 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/index.css - 304 null null 97.298ms
+2026-09-29 15:48:36.051 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui.css - 304 null null 97.2942ms
+2026-09-29 15:48:36.052 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/swagger-ui-bundle.js - 304 null null 98.6256ms
+2026-09-29 15:48:36.145 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/_vs/browserLink - 200 null text/javascript; charset=UTF-8 168.5725ms
+2026-09-29 15:48:36.222 -06:00 [INF] Request starting HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - null null
+2026-09-29 15:48:36.270 -06:00 [INF] Request finished HTTP/2 GET https://localhost:7091/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 49.1074ms
