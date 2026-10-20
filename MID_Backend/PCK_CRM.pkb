@@ -7624,7 +7624,7 @@ FUNCTION FN_GET_TICKET(VI_USERNAME VARCHAR2, VI_PASSWORD VARCHAR2, VI_IP_INFO VA
       RETURN vo_result;
   END fn_helper_soap_get_accounts_by_parent;
 
-  FUNCTION fn_helper_parse_sa_to_json (
+FUNCTION fn_helper_parse_sa_to_json (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_response_clob CLOB,vi_product_type VARCHAR2,vo_service_agreements
     OUT CLOB,vo_message OUT VARCHAR2,vo_result OUT NUMBER
   ) RETURN NUMBER IS 
@@ -7736,10 +7736,12 @@ FUNCTION FN_GET_TICKET(VI_USERNAME VARCHAR2, VI_PASSWORD VARCHAR2, VI_IP_INFO VA
     END IF;
 
     -- Set filter target mode
-    IF upper(trim(vi_product_type)) = 'DIGINET' THEN
+    IF upper(vi_product_type) = 'DIGINET' THEN
       v_target_mode := 'DIGINET';
-    ELSE
+    ELSIF upper(vi_product_type) = 'DIGITEL' THEN
       v_target_mode := 'DIGITEL';
+    ELSE
+      v_target_mode := 'ALL';
     END IF;
 
     -- Process the response CLOB
@@ -7752,12 +7754,18 @@ FUNCTION FN_GET_TICKET(VI_USERNAME VARCHAR2, VI_PASSWORD VARCHAR2, VI_IP_INFO VA
                 WHEN x.product_code = 'DNP'
                     OR x.product_type = 'DIGINET' THEN
                   'DigiNet'
-                WHEN x.product_code IN('DTP','DTUP','DTMP','BFBP')
-                    OR x.product_type IN('DTP','BFP') THEN
+                WHEN x.product_type IN('DTUP') THEN
                   'DigiTel Postpaid'
-                WHEN x.product_code = 'DTPP'
-                    OR x.product_type = 'DTPP' THEN
+                WHEN x.product_type = 'DTPP'     THEN
                   'DigiTel Prepaid'
+                WHEN x.product_type = 'PRMEMBER' THEN
+                  'DigiCell Prepaid Member'
+                WHEN x.product_type = 'PSLEADER' THEN
+                  'DigiCell Postpaid Leader'
+                WHEN x.product_type = 'PSMEMBER' THEN
+                  'DigiCell Postpaid Member'
+                WHEN x.product_type = 'MOBPREP'  THEN
+                  'DigiCell Prepaid'
                 ELSE
                   nvl(
                     x.product_type,x.product_code
@@ -7781,12 +7789,12 @@ FUNCTION FN_GET_TICKET(VI_USERNAME VARCHAR2, VI_PASSWORD VARCHAR2, VI_IP_INFO VA
                 c1:status/c1:code = "1"
                 and c1:product/@code != "RMPACK"
                 and (
-                  ($mode = "DIGINET" and (c1:product/@code = "DNP" and c1:product/@type = "DIGINET"))
-                  or
-                  ($mode = "DIGITEL" and (
-                    c1:product/@type = "DTP" 
-                    or c1:product/@type = "DTPP")
-                  )
+                      ($mode = "DIGINET" and c1:product/@code = "DNP") 
+                      or 
+                      ($mode = "DIGITEL" and (c1:product/@code = "DTUP" or c1:product/@code = "DTUPP" or c1:product/@code = "DTMPP" or c1:product/@code = "DTMP"))
+                      or
+                      ($mode = "ALL" and (c1:product/@code = "DNP" or c1:product/@type = "DTUP" or c1:product/@type = "DTUPP" or c1:product/@code = "DTMPP" or c1:product/@code = "DTMP" or c1:product/@code = "DIGIPR" or c1:product/@code = "PSDOMOBILR" or c1:product/@code = "PSELITEMAX" or c1:product/@code = "PSLITEPLUS" or c1:product/@code = "PSSTARTER" or c1:product/@code = "PSMEMBER"))
+                    )
                 )
               ]'
         PASSING xmltype(vi_response_clob),v_target_mode AS "mode"
@@ -7835,7 +7843,7 @@ FUNCTION FN_GET_TICKET(VI_USERNAME VARCHAR2, VI_PASSWORD VARCHAR2, VI_IP_INFO VA
       END IF;
       RETURN vo_result;
   END fn_helper_parse_sa_to_json;
-
+  
 FUNCTION fn_get_diginet_service_agreements (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_master_account_code VARCHAR2,vo_service_agreements OUT CLOB
     ,vo_message OUT VARCHAR2,vo_result OUT NUMBER
