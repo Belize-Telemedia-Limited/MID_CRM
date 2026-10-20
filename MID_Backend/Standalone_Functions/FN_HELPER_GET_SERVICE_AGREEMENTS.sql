@@ -16,9 +16,11 @@ DECLARE
   --'5JwDphNa';
   vi_ip_info VARCHAR2(100) := 'DW_TESTING';
   -- vi_master_account_code VARCHAR2(100) := '80809'; --Multiple SA
-  vi_master_account_code VARCHAR2(100) := '42744701665'; --SUB MA
+  -- vi_master_account_code VARCHAR2(100) := '42744701665'; --SUB MA
+  vi_master_account_code VARCHAR2(100) := '195507'; --MY ACCOUNT
 
-  vi_product_type VARCHAR2(150) := 'DIGINET'; -- Example default value
+  vi_product_type VARCHAR2(150) := 'ALL'; -- Example default value
+  -- vi_product_type VARCHAR2(150) := 'DIGINET';
   -- vi_product_type VARCHAR2(150) := 'DIGITEL';
 --End Input Variables
 
@@ -121,8 +123,10 @@ DECLARE
 
     IF upper(vi_product_type) = 'DIGINET' THEN
       v_target_mode := 'DIGINET';
-    ELSE
+    ELSIF upper(vi_product_type) = 'DIGITEL' THEN
       v_target_mode := 'DIGITEL';
+    ELSE
+      v_target_mode := 'ALL';
     END IF;
     vv_result             := pck_mind.fn_get_session(
       'Middleware','M1dware',vv_session_id,vv_message,vv_result
@@ -241,10 +245,18 @@ DECLARE
                 WHEN x.product_type = 'DIGINET'
                     OR x.product_code = 'DNP' THEN
                   'DigiNet'
-                WHEN x.product_type = 'DTP'  THEN
+                WHEN x.product_type = 'DTP'      THEN
                   'DigiTel Postpaid'
-                WHEN x.product_type = 'DTPP' THEN
+                WHEN x.product_type = 'DTPP'     THEN
                   'DigiTel Prepaid'
+                WHEN x.product_type = 'PRMEMBER' THEN
+                  'DigiCell Prepaid Member'
+                WHEN x.product_type = 'PSLEADER' THEN
+                  'DigiCell Postpaid Leader'
+                WHEN x.product_type = 'PSMEMBER' THEN
+                  'DigiCell Postpaid Member'
+                WHEN x.product_type = 'MOBPREP'  THEN
+                  'DigiCell Prepaid'
                 ELSE
                   x.product_type
               END
@@ -269,6 +281,8 @@ DECLARE
                        ($mode = "DIGINET" and c1:product/@code = "DNP") 
                        or 
                        ($mode = "DIGITEL" and (c1:product/@type = "DTP" or c1:product/@type = "DTPP" or c1:product/@code = "DTUP" or c1:product/@code = "DTMP"))
+                       or
+                       ($mode = "ALL" and (c1:product/@code = "DNP" or c1:product/@type = "DTP" or c1:product/@type = "DTPP" or c1:product/@code = "DTUP" or c1:product/@code = "DTMP" or c1:product/@code = "DIGIPR" or c1:product/@code = "PSDOMOBILR" or c1:product/@code = "PSELITEMAX" or c1:product/@code = "PSLITEPLUS" or c1:product/@code = "PSSTARTER" or c1:product/@code = "PSMEMBER"))
                    )
                 ]'
         PASSING xmltype(vv_response_clob),v_target_mode AS "mode"
