@@ -70,6 +70,10 @@ BEGIN
       "dsc_interface": "Helper Function to create JSON payload for service agreements"
     },
     {
+      "nm_interface": "FN_GET_DIGI_SERVICE_AGREEMENTS",
+      "dsc_interface": "Function to get Digi service agreements from MIND"
+    },
+    {
       "nm_interface": "FN_GET_DIGITEL_SERVICE_AGREEMENTS",
       "dsc_interface": "Function to get Digitel service agreements from MIND"
     }
