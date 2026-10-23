@@ -15,10 +15,12 @@ DECLARE
   vi_password VARCHAR2(100) := 'GAMIFY';
   --'5JwDphNa';
   vi_ip_info VARCHAR2(100) := 'DW_TESTING';
+    vi_master_account_code VARCHAR2(100) := '57006'; --SUB MA
 --  vi_master_account_code VARCHAR2(100) := '40274'; --Root MA
-  vi_master_account_code VARCHAR2(100) := '80809'; --Multiple SA
-  -- vi_master_account_code VARCHAR2(100) := '42744701665'; --SUB MA
-  vi_product_type VARCHAR2(150) := 'DIGITEL';
+--  vi_master_account_code VARCHAR2(100) := '80809'; --Multiple SA
+--   vi_master_account_code VARCHAR2(100) := '42744701665'; --SUB MA Under business
+--  vi_product_type VARCHAR2(150) := 'DIGITEL';
+vi_product_type VARCHAR2(150) := 'ALL';
 --End Input Variables
 
 --Begin Output Variables
@@ -51,7 +53,7 @@ DECLARE
     v_sub_json CLOB;
     vv_buffer VARCHAR2(32767);
     vv_url VARCHAR2(500) := gv_api_url;
-    vv_product_type VARCHAR2(50) := 'DIGITEL';
+    vv_product_type VARCHAR2(50) := 'ALL';
     vv_offset NUMBER := 1;
     vv_amount PLS_INTEGER := 32767;
   --END FUNCTION VARIABLES
