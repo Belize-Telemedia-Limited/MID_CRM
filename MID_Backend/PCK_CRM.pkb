@@ -7624,7 +7624,7 @@ FUNCTION FN_GET_TICKET(VI_USERNAME VARCHAR2, VI_PASSWORD VARCHAR2, VI_IP_INFO VA
       RETURN vo_result;
   END fn_helper_soap_get_accounts_by_parent;
 
-FUNCTION fn_helper_parse_sa_to_json (
+  FUNCTION fn_helper_parse_sa_to_json (
     vi_username VARCHAR2,vi_password VARCHAR2,vi_ip_info VARCHAR2,vi_response_clob CLOB,vi_product_type VARCHAR2,vo_service_agreements
     OUT CLOB,vo_message OUT VARCHAR2,vo_result OUT NUMBER
   ) RETURN NUMBER IS 
@@ -7754,7 +7754,7 @@ FUNCTION fn_helper_parse_sa_to_json (
                 WHEN x.product_code = 'DNP'
                     OR x.product_type = 'DIGINET' THEN
                   'DigiNet'
-                WHEN x.product_type IN('DTUP') THEN
+                WHEN x.product_type IN('DTP') THEN
                   'DigiTel Postpaid'
                 WHEN x.product_type = 'DTPP'     THEN
                   'DigiTel Prepaid'
@@ -7793,9 +7793,8 @@ FUNCTION fn_helper_parse_sa_to_json (
                       or 
                       ($mode = "DIGITEL" and (c1:product/@code = "DTUP" or c1:product/@code = "DTUPP" or c1:product/@code = "DTMPP" or c1:product/@code = "DTMP"))
                       or
-                      ($mode = "ALL" and (c1:product/@code = "DNP" or c1:product/@type = "DTUP" or c1:product/@type = "DTUPP" or c1:product/@code = "DTMPP" or c1:product/@code = "DTMP" or c1:product/@code = "DIGIPR" or c1:product/@code = "PSDOMOBILR" or c1:product/@code = "PSELITEMAX" or c1:product/@code = "PSLITEPLUS" or c1:product/@code = "PSSTARTER" or c1:product/@code = "PSMEMBER"))
+                      ($mode = "ALL" and (c1:product/@code = "DNP" or c1:product/@code = "DTUP" or c1:product/@code = "DTUPP" or c1:product/@code = "DTMPP" or c1:product/@code = "DTMP" or c1:product/@code = "DIGIPR" or c1:product/@code = "PSDOMOBILR" or c1:product/@code = "PSELITEMAX" or c1:product/@code = "PSLITEPLUS" or c1:product/@code = "PSSTARTER" or c1:product/@code = "PSMEMBER"))
                     )
-                )
               ]'
         PASSING xmltype(vi_response_clob),v_target_mode AS "mode"
       COLUMNS
