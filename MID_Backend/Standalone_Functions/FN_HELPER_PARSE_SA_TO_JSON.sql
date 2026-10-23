@@ -163,7 +163,7 @@ DECLARE
                 WHEN x.product_code = 'DNP'
                     OR x.product_type = 'DIGINET' THEN
                   'DigiNet'
-                WHEN x.product_type IN('DTUP') THEN
+                WHEN x.product_type IN('DTP') THEN
                   'DigiTel Postpaid'
                 WHEN x.product_type = 'DTPP'     THEN
                   'DigiTel Prepaid'
@@ -202,9 +202,8 @@ DECLARE
                       or 
                       ($mode = "DIGITEL" and (c1:product/@code = "DTUP" or c1:product/@code = "DTUPP" or c1:product/@code = "DTMPP" or c1:product/@code = "DTMP"))
                       or
-                      ($mode = "ALL" and (c1:product/@code = "DNP" or c1:product/@type = "DTUP" or c1:product/@type = "DTUPP" or c1:product/@code = "DTMPP" or c1:product/@code = "DTMP" or c1:product/@code = "DIGIPR" or c1:product/@code = "PSDOMOBILR" or c1:product/@code = "PSELITEMAX" or c1:product/@code = "PSLITEPLUS" or c1:product/@code = "PSSTARTER" or c1:product/@code = "PSMEMBER"))
+                      ($mode = "ALL" and (c1:product/@code = "DNP" or c1:product/@code = "DTUP" or c1:product/@code = "DTUPP" or c1:product/@code = "DTMPP" or c1:product/@code = "DTMP" or c1:product/@code = "DIGIPR" or c1:product/@code = "PSDOMOBILR" or c1:product/@code = "PSELITEMAX" or c1:product/@code = "PSLITEPLUS" or c1:product/@code = "PSSTARTER" or c1:product/@code = "PSMEMBER"))
                     )
-                )
               ]'
         PASSING xmltype(vi_response_clob),v_target_mode AS "mode"
       COLUMNS
@@ -258,7 +257,7 @@ BEGIN
     vi_username,vi_password,vi_ip_info,vi_master_account_code,vo_service_agreements,vo_message,vo_result
   );
   vi_response_clob := vo_service_agreements;
-  -- vo_result        := fn_helper_parse_sa_to_json(
+--   vo_result        := fn_helper_parse_sa_to_json(
   vo_result        := pck_crm.fn_helper_parse_sa_to_json(
     vi_username,vi_password,vi_ip_info,vi_response_clob,vi_product_type,vo_json,vo_message,vo_result
   );
